@@ -7,7 +7,7 @@
 							<div class="post-row-top">
 								<h1><?=$post['title']?></h1>
 								<div class="button-right-top"><a class="button button--edit mt-25" href="#">Редактировать</a></div>
-							</div>
+							</div>    
 							<div class="post-info">
 								<div class="post-info__author">Емельян Казаков</div>
 								<div class="post-info__topic"> <a class="post-info__link" href="#">Путешествия</a></div>
