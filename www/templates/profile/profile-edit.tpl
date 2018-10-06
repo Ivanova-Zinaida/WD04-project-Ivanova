@@ -1,4 +1,4 @@
-		<div class="content">
+	<div class="content">
 			<div class="container user-content section-page">
 				<div class="col-md-12 offset-md-1">
 					<h1>Редактировать профиль</h1>

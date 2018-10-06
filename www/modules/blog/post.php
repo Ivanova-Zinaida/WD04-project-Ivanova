@@ -1,11 +1,13 @@
 <?php
 
-$title="Блог -все записи";
+$title="Пост";
 
-$post=R::find('posts','ORDER BY ID DESC');
+$post=R::findOne('posts', 'id=?', array($_GET['id']));
+
+/*$post=R::find('posts','ORDER BY ID DESC');*/
 ob_start();
 include ROOT. "templates/_parts/_header.tpl";
-include ROOT."templates/blog/blog-all-posts.tpl";
+include ROOT."templates/blog/blog-post.tpl";
 /*include ROOT. "templates/main/main.tpl";*/
 $content = ob_get_contents();
 ob_end_clean();

@@ -1,5 +1,5 @@
 <?php
-
+ 
 $title="Редактировать профиль";
 
 $currentUser =$_SESSION['logged_user'];
@@ -87,8 +87,8 @@ if(isset($_POST['profile-update'])){
 			
 			$target_file=$avatarFolderLocation.$db_file_name;
 			
-			$wmax=410;
-			$hmax=410;
+			$wmax=205;
+			$hmax=205;
 			$img=createThumbnail($target_file,$wmax,$hmax);
 			$img->writeImage($target_file);
 			
@@ -97,8 +97,8 @@ if(isset($_POST['profile-update'])){
 						
 			$target_file=$avatarFolderLocation.$db_file_name;
 			$resized_file=$avatarFolderLocation. '48-'. $db_file_name;
-			$wmax=100;
-			$hmax=100;
+			$wmax=50;
+			$hmax=50;
 			$img=createThumbnail($target_file,$wmax,$hmax);
 			$img->writeImage($resized_file);
 			
