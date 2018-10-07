@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Окт 06 2018 г., 23:27
+-- Время создания: Окт 07 2018 г., 18:29
 -- Версия сервера: 5.6.38
 -- Версия PHP: 5.5.38
 
@@ -40,6 +40,26 @@ CREATE TABLE `about` (
 
 INSERT INTO `about` (`id`, `name`, `description`) VALUES
 (1, 'Егор Казаков', 'Я веб-разработчик');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `categories`
+--
+
+CREATE TABLE `categories` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `cat_title` varchar(191) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+
+--
+-- Дамп данных таблицы `categories`
+--
+
+INSERT INTO `categories` (`id`, `cat_title`) VALUES
+(1, 'Путешествие'),
+(2, 'Учеба по PHP'),
+(3, 'Языки программирования ');
 
 -- --------------------------------------------------------
 
@@ -102,7 +122,8 @@ INSERT INTO `users` (`id`, `email`, `password`, `role`, `name`, `secondname`, `c
 (5, 'info2@mail.com', '$2y$10$wjbRLWv2r9Faefvt5K5jYuHacmik2w6CV3YKcX6UniHGtUo0RLqUG', 'admin', 'Зинаида', 'Иванова', 'Санкт-Петербург', 'Россия', '-522855345.jpg', '48--522855345.jpg', 'WliN2xgI4eSBKMw', 0),
 (6, 'info@mail.com', '$2y$10$tgMRNqHe1Y96LersbmKDueQlJPOss6KUwuDMbiLwerIRYouAp7Obq', 'user', 'Сергей', 'Степанов', 'Москва', 'Россия', '202083334.jpg', '48-202083334.jpg', '6Zm8OS5E0QcsgYb', 0),
 (9, 'zinok.ilanka@yandex.ru', '$2y$10$J9KxJJnj36ORp8oAujR0...PXiwX8cGSTdclXvfn/nFuhyUes0HHC', 'user', 'Зинаида', 'Степановa', 'Санкт-Петербург', 'Россия', '-451280623.jpg', '48--451280623.jpg', 'irkGYJNfAq4DuwE', -1),
-(10, 'ilanka1@yandex.ru', '$2y$10$msMqY/br9As5lKYG.xbeWuYIpwJZNFMUG4T7thd/LkujLM/ut6/kW', 'user', NULL, NULL, NULL, NULL, NULL, NULL, 'fy8H931mAbDQilK', 0);
+(10, 'ilanka1@yandex.ru', '$2y$10$msMqY/br9As5lKYG.xbeWuYIpwJZNFMUG4T7thd/LkujLM/ut6/kW', 'user', NULL, NULL, NULL, NULL, NULL, NULL, 'fy8H931mAbDQilK', 0),
+(11, 'info3@mail.com', '$2y$10$rsQI8sL4yYLpibyvCA9vl.Z/ZgLmOAVCdoVNmvMgREnexerw0pHUG', 'user', 'Антон', 'Смирнов', 'Санкт-Петербург', 'Россия', '1103735083.jpg', '48-1103735083.jpg', 'xc8hCkeNiDE4sr7', 0);
 
 --
 -- Индексы сохранённых таблиц
@@ -112,6 +133,12 @@ INSERT INTO `users` (`id`, `email`, `password`, `role`, `name`, `secondname`, `c
 -- Индексы таблицы `about`
 --
 ALTER TABLE `about`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `categories`
+--
+ALTER TABLE `categories`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -138,6 +165,12 @@ ALTER TABLE `about`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT для таблицы `categories`
+--
+ALTER TABLE `categories`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT для таблицы `posts`
 --
 ALTER TABLE `posts`
@@ -147,7 +180,7 @@ ALTER TABLE `posts`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

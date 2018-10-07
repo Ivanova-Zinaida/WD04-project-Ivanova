@@ -139,5 +139,8 @@ function initMap() {
 initMap();
 // Ждем полной загрузки страницы, после этого запускаем initMap()
 // google.maps.event.addDomListener(window, "load", initMap);
+ 
 
+	
 });
+

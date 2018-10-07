@@ -67,12 +67,37 @@ $uri = explode('?', $uri);
 	 case 'blog':
 		 include ROOT."modules/blog/index.php";
 		 break;	 
+		 
 	 case 'blog/post-new':
 		 include ROOT."modules/blog/post-new.php";
 		 break;	 
-		 case 'blog/post':
+		 
+	 case 'blog/post':
 		 include ROOT."modules/blog/post.php";
-		 break;	
+		 break;
+		 
+
+		 
+		 		 
+	 case 'blog/categories':
+		 include ROOT."modules/categories/all.php";
+		 break;
+		 
+	 case 'blog/category-new':
+		 include ROOT."modules/categories/new.php";
+		 break;
+		 
+	 case 'blog/category-edit': 
+		 include ROOT."modules/categories/edit.php";
+		 break;
+	
+			 
+	 case 'blog/category-delete':
+		 include ROOT."modules/categories/delete.php";
+		 break;
+		 
+		 
+		 
 	 default:
 		include  ROOT."modules/main/index.php";
 		 

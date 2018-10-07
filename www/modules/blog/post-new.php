@@ -12,7 +12,7 @@ if(isset($_POST['postNew'])){
 		$errors[]=['title'=>'Введите Текст поста'];
 	}
 	
-	if(empty($errors)){
+	if(empty($errors)){ 
 		$post=R::dispense('posts');
 		$post->title=htmlentities($_POST['postTitle']);
 		$post->text=$_POST['postText'];
