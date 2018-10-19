@@ -1,22 +1,47 @@
-	
+	 
 		<div class="content">
 			<div class="container user-content section-page">
 				<div class="row">
 					<div class="col-md-10 offset-md-1">
 						<div class="post">
 							<div class="post-row-top">
-								<h1><?=$post['title']?></h1>
-								<div class="button-right-top"><a class="button button--edit mt-25" href="#">Редактировать</a></div>
+							
+							<?PHP if(isAdmin()){
+							$additionalHeaderClass='mr-100';
+							
+							
+							}?>
+							
+								<h1 class='<?=@$additionalHeaderClass?>'><?=$post['title']?></h1>
+							
+								<?PHP  if (isAdmin()) { ?>
+														
+								<div class="button-right-top"><a class="button_position button button--edit mt-25" href="<?=HOST?>blog/post-edit?id=<?=$post['id']?>">Редактировать</a>
+								<a class="button button--remove mt-25" href="<?=HOST?>blog/post-delete?id=<?=$post['id']?>">Удалить</a>
+								</div>
+								
+								<?PHP } ?>
+		
 							</div>    
 							<div class="post-info">
-								<div class="post-info__author">Емельян Казаков</div>
-								<div class="post-info__topic"> <a class="post-info__link" href="#">Путешествия</a></div>
+								<div class="post-info__author"><?=$post['name']?> <?=$post['secondname']?></div>
+								<div class="post-info__topic"> <a class="post-info__link" href="#"><?=$post['cat_title']?></a></div>
 								
 								<div class="post-info__date">	<? echo rus_date(" d F Y H:i", strtotime($post['date_time']));?></div>
+				
 							
 								<div class="post-info__comments"><a class="post-info__link" href="#">2 комментария</a></div>
 							</div>
-							<div class="post-img"><img src="<?=HOST?>usercontent/blog/<?=$post['post_image']?>" alt="Горы" /></div>
+										
+							
+							<?PHP if ($post['post_image'] !=''){?>
+							<div class="post-img">
+								 <img src="<?=HOST?>usercontent/blog/<?=$post['post_image']?>" alt="<?=$post['title']?>" />
+						   </div>
+							<?PHP }?>
+			
+			
+							
 							<div class="post-text">
 								<p><?=$post['text']?></p>
 							</div>

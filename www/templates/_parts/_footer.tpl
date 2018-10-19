@@ -1,4 +1,5 @@
-		<footer>
+<div class="wrap-bottom">
+				<footer>
 			<div class="footer pt-55 pb-70">
 				<div class="container">
 					<div class="row">
@@ -20,3 +21,5 @@
 				</div>
 			</div>
 		</footer><!-- build:jsLibs js/libs.js -->
+	</div>
+</div>

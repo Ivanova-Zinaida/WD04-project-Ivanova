@@ -9,6 +9,18 @@ padding-bottom: 10px;
 	color: white;
   background-image: -webkit-linear-gradient(90deg, #15973d 0%, #2b8e3c 100%);
 }
-.button-remove{
-	
+.formInput-image__delete-button {
+    position: absolute;
+    bottom: 10px;
+    left: 200px;
+}
+.button-right-top{
+	position: relative;
+}
+.button_position{
+	position: absolute;
+	left: -180px;
+}
+.mr-100{
+	margin-right: 100px !important; 
 }

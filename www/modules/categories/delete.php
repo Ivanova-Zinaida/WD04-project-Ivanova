@@ -1,4 +1,9 @@
 <?php
+if (!isAdmin()){
+		
+		header("Location:" . HOST);
+		die();
+}
 
 $title="Удалить категории";
 

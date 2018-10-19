@@ -4,5 +4,6 @@
 <script src="<?=HOST?>templates/assets/js/main.js"></script>
 <script src="<?=HOST?>templates/assets/js/resultHide.js"></script>
 <script defer="defer" src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<script src="<?=HOST?>libs/ckeditor/ckeditor.js"></script>
 </body>
 </html>

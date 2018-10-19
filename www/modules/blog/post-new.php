@@ -1,7 +1,14 @@
 <?php
+								
+if (!isAdmin()){
+		
+		header("Location:" . HOST);
+		die();
+}
 
 $title="Блог-добавить новый пост";
 
+$cats=R::find('categories', 'ORDER BY cat_title ASC');
 
 if(isset($_POST['postNew'])){
 	
@@ -15,6 +22,7 @@ if(isset($_POST['postNew'])){
 	if(empty($errors)){ 
 		$post=R::dispense('posts');
 		$post->title=htmlentities($_POST['postTitle']);
+		$post->cat=htmlentities($_POST['postCat']);
 		$post->text=$_POST['postText'];
 		$post->date=time();
 		$post->authorID=$_SESSION['logged_user']['id'];
@@ -85,7 +93,7 @@ if(isset($_POST['postNew'])){
 			
 		}
 		R::store($post);
-		header("Location:".HOST."blog");
+		header("Location:".HOST."blog?result=postCreated");
 		exit();
 	}
 }

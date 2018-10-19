@@ -139,6 +139,8 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+justify-content: space-between;
+align-items: space-between;
 }
 .content {
   -webkit-box-flex: 1;
@@ -1343,6 +1345,7 @@ fieldset {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
+	max-height: 80px;
 }
 .user-info {
   display: -webkit-box;

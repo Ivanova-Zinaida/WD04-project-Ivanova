@@ -28,7 +28,7 @@
 				<li class="admin-nav-item"><a class="admin-nav__link" href="#"><i class="fas fa-envelope"></i><span class="ml-10">Сообщения</span></a></li>
 			</ul>
 			<ul class="admin-nav admin-nav--right section-ui">
-				<li class="admin-nav-item"><a class="admin-nav__link" href="#"><i class="fas fa-sign-out-alt"></i><span class="ml-10">Выход</span></a></li>
+				<li class="admin-nav-item"><a class="admin-nav__link" href="<?=HOST?>logout"><i class="fas fa-sign-out-alt"></i><span class="ml-10">Выход</span></a></li>
 			</ul>
 		</div>
 		
