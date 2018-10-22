@@ -68,7 +68,7 @@ if(isset($_POST['postUpdate'])){
 			
 			$postImage=$post->post_image;
 			
-
+ 
 				if($postImage !=''){
 				
 				$picurl=$postImageFolderLocation. $postImage;

@@ -84,16 +84,34 @@
 					</div>
 					<div class="offset-md-1 col-md-4">
 						<div class="contacts__title title-1">Связаться со мной</div>
-						<form class="form-contacts" action="">
-							<div class="form-group"><label class="label"><input class="input" name="firstname" type="text" placeholder="Введите имя"/></label></div>
-							<div class="form-group"><label class="label"><input class="input" name="firstname" type="text" placeholder="Email"/></label></div>
-							<div class="form-group"><label class="label"><textarea class="textarea" name="message" type="type" placeholder="Cообщение"></textarea></label></div>
+						<form class="form-contacts" action="<?=HOST?>contacts" method="POST" enctype="multipart/form-data">
+						
+							
+					<?PHP include ROOT . "templates/_parts/_errors.tpl";?>
+					<?PHP include ROOT . "templates/_parts/_success.tpl";?>
+						
+							<div class="form-group"><label class="label">
+								<input class="input" name="name" type="text" placeholder="Введите имя"/>
+							</label></div>
+							<div class="form-group">
+							<label class="label">
+								<input class="input" name="email" type="text" placeholder="Email"/>
+							</label></div>
+							<div class="form-group">
+							<label class="label">
+								<textarea class="textarea" name="message" type="type" placeholder="Cообщение"></textarea>
+							</label></div>
 							<div class="form-contacts__file-upload">
 								<div class="file-upload__title title-6">Прикрепить файл</div>
-								<div class="file-upload__comment">div jpg, png, pdf, doc, весом до 2Мб.</div><input class="inputfile" type="file" name="file" id="file" /><label class="label-input-file" for="file">Выбрать файл</label><span>Файл не выбран</span><input class="button button--save" type="submit" value="Отправить" /></div>
+								<div class="file-upload__comment">div jpg, png, pdf, doc, весом до 2Мб.</div>
+								<input class="inputfile" type="file" name="file" id="file" />
+								<label class="label-input-file" for="file">Выбрать файл</label><span>Файл не выбран</span>
+								<input name="newMessage" class="button button--save" type="submit" value="Отправить"/>
+							</div>
 						</form>
 					</div>
 				</div>
 			</div>
 			<div class="map" id="map"></div>
 		</div>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIr67yxxPmnF-xb4JVokCVGgLbPtuqxiA"></script>

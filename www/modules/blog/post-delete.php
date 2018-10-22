@@ -11,7 +11,7 @@ $title="Удалить пост";
 $post=R::load('posts', $_GET['id']);
 
 
-if(isset($_POST['postDelete'])){
+if(isset($_POST['postDelete'])){ 
 	
 		
 		$postImageFolderLocation=ROOT.'usercontent/blog/';
@@ -21,7 +21,7 @@ if(isset($_POST['postDelete'])){
 		$picurl=$postImageFolderLocation. $postImage;
 		if(file_exists($picurl)){unlink($picurl);}
 				
-				
+		 		
 		$picurl320=$postImageFolderLocation.'320-'. $postImage;
 		if(file_exists($picurl320)){unlink($picurl320);}
 				
@@ -37,7 +37,7 @@ if(isset($_POST['postDelete'])){
 ob_start();
 include ROOT. "templates/_parts/_header.tpl";
 include ROOT."templates/blog/post-delete.tpl";
-/*include ROOT. "templates/main/main.tpl";*/
+
 $content = ob_get_contents();
 ob_end_clean();
 

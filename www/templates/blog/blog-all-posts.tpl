@@ -23,7 +23,7 @@
 
 					     <?PHP include ROOT."templates/_parts/_blog-card.tpl"?>
 					     
-					<?PHP }?>
+				<?PHP }?>
 				</div>
 			</div>
 		</div>

@@ -117,7 +117,11 @@ $uri = explode('?', $uri);
 		 include ROOT."modules/contacts/messages.php";
 		 break;
 		 
+	case 'contacts/message-delete':
+		 include ROOT."modules/contacts/message-delete.php";
+		 break;
 		 
+		
 		 
 		 
 	 default:

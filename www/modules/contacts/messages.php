@@ -3,9 +3,8 @@
 
 $title="Сообщения";
 
+$messages = R::find('messages', 'ORDER BY id DESC');
 
-
-$cats=R::find('categories', 'ORDER BY cat_title ASC');
 
 ob_start();
 include ROOT. "templates/_parts/_header.tpl";

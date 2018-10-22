@@ -10,7 +10,6 @@
 <?PHP } ?> 
 
 
-
 <?PHP if($_GET['result']=='postCreated'){?>
 		
 	<div class="notify no-radius-bottom notify--error mt-20 mb-10 success-error " data-notify-hide>
