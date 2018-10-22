@@ -104,6 +104,20 @@ $uri = explode('?', $uri);
 		 include ROOT."modules/categories/delete.php";
 		 break;
 		 
+				 
+	 case 'contacts':
+		 include ROOT."modules/contacts/index.php";
+		 break;
+		 
+	 case 'contacts-edit':
+		 include ROOT."modules/contacts/edit.php";
+		 break;
+		 
+	case 'messages':
+		 include ROOT."modules/contacts/messages.php";
+		 break;
+		 
+		 
 		 
 		 
 	 default:
