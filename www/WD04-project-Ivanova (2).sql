@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Окт 22 2018 г., 20:28
+-- Время создания: Окт 25 2018 г., 13:24
 -- Версия сервера: 5.6.38
 -- Версия PHP: 5.5.38
 
@@ -29,17 +29,18 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `about` (
-  `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `description` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `id` int(11) UNSIGNED NOT NULL,
+  `name` varchar(191) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
+  `description` text COLLATE utf8mb4_unicode_520_ci,
+  `photo` varchar(191) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
 -- Дамп данных таблицы `about`
 --
 
-INSERT INTO `about` (`id`, `name`, `description`) VALUES
-(1, 'Егор Казаков', 'Я веб-разработчик');
+INSERT INTO `about` (`id`, `name`, `description`, `photo`) VALUES
+(1, 'Зинаида Иванова', 'Я веб разработчик из Казани. Мне 28 лет.Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy.Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!					\r\nЗнаком и использую современный workflow, работаю с репозиториями git и сборкой проекта на gulp.							<script src=\"http://project/libs/ckeditor/ckeditor.js\"></script>\r\n<script>\r\n		document.addEventListener(\'DOMContentLoaded\', function(){\r\n				CKEDITOR.replace(\'ckEditor\',{\r\n					customConfig:\'http://project/templates/assets/js/ckEditorConfig.js\'\r\n				});	\r\n			\r\n			\r\n		});\r\n\r\n\r\n\r\n\r\n</script>							', '742718585.jpg');
 
 -- --------------------------------------------------------
 
@@ -119,6 +120,28 @@ INSERT INTO `contacts` (`id`, `email`, `phone`, `address`, `name`, `secondname`,
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `jobs`
+--
+
+CREATE TABLE `jobs` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `title` varchar(191) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
+  `description` varchar(255) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
+  `period` varchar(191) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+
+--
+-- Дамп данных таблицы `jobs`
+--
+
+INSERT INTO `jobs` (`id`, `title`, `description`, `period`) VALUES
+(1, 'Frontend разработчик, Вконтактe, mail.ru group', 'Работы в команде Вконтакте. Работал в команде над обновление сервиса Музыка, работа над видео разделом. Создание видеоплеера. Создание кроссбраузерных компонентов. Работа над оптимизацией скорости загрузки медиа контента', 'февраль 2017 &mdash; по настоящее время'),
+(2, 'Frontend разработчик, Вконтактe, mail.ru group', 'Работы в команде Вконтакте. Работал в команде над обновление сервиса Музыка, работа над видео разделом. Создание видеоплеера. Создание кроссбраузерных компонентов. Работа над оптимизацией скорости загрузки медиа контента', 'февраль 2017 &mdash; по настоящее время'),
+(3, 'Frontend разработчик, Вконтактe, mail.ru group', 'Работы в команде Вконтакте. Работал в команде над обновление сервиса Музыка, работа над видео разделом. Создание видеоплеера. Создание кроссбраузерных компонентов. Работа над оптимизацией скорости загрузки медиа контента', 'февраль 2017 &mdash; по настоящее время');
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `messages`
 --
 
@@ -171,6 +194,33 @@ INSERT INTO `posts` (`id`, `title`, `text`, `date`, `author_id`, `date_time`, `p
 (12, ' Базилика Сан-Джованни ин Латерано', 'Одна из самых древних христианский церквей, первый храм Рима. В церковной иерархии она находится выше всех остальных, даже выше собора Святого Петра. Католические иерархи присвоили ей титул «базилика майор», то есть «старшая». Ее признают «главой и матерью всех церквей». Храм появился во времена правления Константина при Папе Сильвестре I в IV веке н.э. В базилике захоронены шесть Пап и хранятся мощи апостолов Святого Павла и Святого Петра.', 1538848549, 5, '2018-10-06 20:55:49', '413961118.jpg', '320-413961118.jpg', 1, NULL),
 (14, 'Достопримечательности Рима. Самые главные и интересные достопримечательности Рима ', 'Рим - столица Италии и региона Лацио, один из красивейших и интереснейших городов мира. Вечный город расположен на легендарных семи холмах на реке Тибр примерно в 25 км от побережья Тирренского моря. Рим - колыбель великой цивилизации и центр одной из величайших империй в истории человечества. Здесь почти на каждой улице расположена какая-нибудь достопримечательность и легко можно встретить памятники архитектуры и культуры, которым несколько тысяч лет. Поэтому изучить Рим за пару дней просто не возможно.\r\n\r\nИсторический центр города внесён в список объектов Всемирного наследия ЮНЕСКО. В Риме можно прикоснуться к периоду Античности и истории Римской империи: посмотреть знаменитый Форум, легендарный Колизей, древний Пантеон и множество других памятников древности и грандиозных руин, прогуляться по узким улочкам с гладкой, отполированный миллионами ног и веками брусчаткой, посидеть в уютных уличных кафе и тратториях, посетить знаменитые римские площади и фонтаны, дворцы и сады. Кроме этого, Рим - центр католической веры: Ватикан, его музеи, площадь и собор св. Петра, замок Святого Ангела также являются популярными среди туристов.								', 1539866199, 5, '2018-10-06 22:32:04', '-168895511.jpg', '320--168895511.jpg', 1, '2018-10-18 15:36:39'),
 (19, 'JavaScript', '<p>тест</p>\r\n', 1539898346, 5, '2018-10-19 00:32:26', '-378104808.jpg', '320--378104808.jpg', 3, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `skills`
+--
+
+CREATE TABLE `skills` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `html` int(11) UNSIGNED DEFAULT NULL,
+  `css` int(11) UNSIGNED DEFAULT NULL,
+  `js` int(11) UNSIGNED DEFAULT NULL,
+  `jquery` int(11) UNSIGNED DEFAULT NULL,
+  `php` int(11) UNSIGNED DEFAULT NULL,
+  `mysql` int(11) UNSIGNED DEFAULT NULL,
+  `git` int(11) UNSIGNED DEFAULT NULL,
+  `gulp` int(11) UNSIGNED DEFAULT NULL,
+  `npm` int(11) UNSIGNED DEFAULT NULL,
+  `webpack` int(11) UNSIGNED DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+
+--
+-- Дамп данных таблицы `skills`
+--
+
+INSERT INTO `skills` (`id`, `html`, `css`, `js`, `jquery`, `php`, `mysql`, `git`, `gulp`, `npm`, `webpack`) VALUES
+(1, 80, 70, 50, 55, 50, 40, 75, 70, 45, 60);
 
 -- --------------------------------------------------------
 
@@ -235,6 +285,12 @@ ALTER TABLE `contacts`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `jobs`
+--
+ALTER TABLE `jobs`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `messages`
 --
 ALTER TABLE `messages`
@@ -246,6 +302,12 @@ ALTER TABLE `messages`
 ALTER TABLE `posts`
   ADD PRIMARY KEY (`id`),
   ADD KEY `index_foreignkey_posts_author` (`author_id`);
+
+--
+-- Индексы таблицы `skills`
+--
+ALTER TABLE `skills`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Индексы таблицы `users`
@@ -261,7 +323,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `about`
 --
 ALTER TABLE `about`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT для таблицы `categories`
@@ -282,16 +344,28 @@ ALTER TABLE `contacts`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT для таблицы `jobs`
+--
+ALTER TABLE `jobs`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT для таблицы `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT для таблицы `posts`
 --
 ALTER TABLE `posts`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+--
+-- AUTO_INCREMENT для таблицы `skills`
+--
+ALTER TABLE `skills`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
