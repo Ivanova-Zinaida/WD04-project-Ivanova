@@ -2,10 +2,7 @@
 	function dataFromPost($filedName){
 		global $contacts;
 		echo @$_POST[$filedName] !=''? @$_POST[$filedName]: $contacts[$filedName];
-	
-	}		
-		
-		
+	}			
 ?>
 			<div class="content">
 			<div class="container contacts-edit section-page">

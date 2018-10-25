@@ -1177,19 +1177,19 @@ fieldset {
   margin-bottom: 40px;
 }
 .svg-box {
-  border: 1px solid #222;
-  width: 115px;
-  height: 115px;
+/*  border: 1px solid #222;*/
+/*  width: 115px;
+  height: 115px;*/
 }
 .circle-1 {
   fill: transparent;
   stroke-width: 10px;
-  stroke: #222222;
+  stroke: #303030;
 }
 .circle-2 {
   fill: transparent;
   stroke-width: 10px;
-  stroke-dasharray: 314.16px;
+  /*stroke-dasharray: 314.16px;*/
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
@@ -1201,7 +1201,8 @@ fieldset {
   position: relative;
   display: inline-block;
   margin-left: 40px;
-}
+
+} 
 .indicator__value {
   position: absolute;
   top: 50%;

@@ -59,7 +59,7 @@
 			<?php include_once ROOT . "templates/_parts/_ckEditorConnect.tpl"?>
 							</label>	
 						</div>
-						
+						 
 						<input type="submit" value="Сохранить" class="button button--save mr-20" name='postUpdate'>
 						<a href="<?+HOST?>blog" class="button ">Отмена</a>
 						
