@@ -16,7 +16,13 @@
 								<li><a href="<?=HOST?>contacts">Контакты</a></li>
 							</ul>
 						</nav>
-						<div class="footer__item footer__icons col-lg-4"><a href="#" target="_blank"><i class="fab fa-vk"></i></a><a href="#" target="_blank"><i class="fab fa-twitter"></i></a><a href="#" target="_blank"><i class="fab fa-youtube"></i></a><a href="#" target="_blank"><i class="fab fa-instagram"></i></a><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></div>
+						<div class="footer__item footer__icons col-lg-4">
+						<a href="https://vk.com/ilanka26" target="_blank"><i class="fab fa-vk"></i></a>
+						<a href="https://github.com/Ivanova-Zinaida" target="_blank"><i class="fab fa-github"></i></a>
+						<!--<a href="#" target="_blank"><i class="fab fa-twitter"></i></a>-->
+						<!--<a href="#" target="_blank"><i class="fab fa-youtube"></i></a>-->
+						<a href="https://www.instagram.com/ilanka26?r=nametag" target="_blank"><i class="fab fa-instagram"></i></a>
+						<!--<a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></div>-->
 					</div>
 				</div>
 			</div>

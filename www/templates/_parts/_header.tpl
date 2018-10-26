@@ -1,7 +1,7 @@
 <?php 
 	if(isAdmin()){
 		include ROOT."templates/_parts/_admin-panel.tpl";
-	}?>
+}?>
 <header class="header">
 	<div class="header-admin__container">
 		<div class="header-top">

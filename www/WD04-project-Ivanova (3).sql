@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Окт 25 2018 г., 13:24
+-- Время создания: Окт 26 2018 г., 16:18
 -- Версия сервера: 5.6.38
 -- Версия PHP: 5.5.38
 
@@ -40,7 +40,7 @@ CREATE TABLE `about` (
 --
 
 INSERT INTO `about` (`id`, `name`, `description`, `photo`) VALUES
-(1, 'Зинаида Иванова', 'Я веб разработчик из Казани. Мне 28 лет.Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy.Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!					\r\nЗнаком и использую современный workflow, работаю с репозиториями git и сборкой проекта на gulp.							<script src=\"http://project/libs/ckeditor/ckeditor.js\"></script>\r\n<script>\r\n		document.addEventListener(\'DOMContentLoaded\', function(){\r\n				CKEDITOR.replace(\'ckEditor\',{\r\n					customConfig:\'http://project/templates/assets/js/ckEditorConfig.js\'\r\n				});	\r\n			\r\n			\r\n		});\r\n\r\n\r\n\r\n\r\n</script>							', '742718585.jpg');
+(1, 'Зинаида Иванова', '<p>Я веб разработчик из Санкт-Петербурга. Мне 30&nbsp;лет.Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. Этот сайт я сделала в рамках обучения в школе онлайн обучения WebCademy.Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво! Знакома и использую современный workflow, работаю с репозиториями git и сборкой проекта на gulp.</p>\r\n', '742718585.jpg');
 
 -- --------------------------------------------------------
 
@@ -60,7 +60,8 @@ CREATE TABLE `categories` (
 INSERT INTO `categories` (`id`, `cat_title`) VALUES
 (1, 'Путешествие'),
 (2, 'Учеба по PHP'),
-(3, 'Языки программирования ');
+(3, 'Языки программирования '),
+(4, 'Работа');
 
 -- --------------------------------------------------------
 
@@ -135,7 +136,6 @@ CREATE TABLE `jobs` (
 --
 
 INSERT INTO `jobs` (`id`, `title`, `description`, `period`) VALUES
-(1, 'Frontend разработчик, Вконтактe, mail.ru group', 'Работы в команде Вконтакте. Работал в команде над обновление сервиса Музыка, работа над видео разделом. Создание видеоплеера. Создание кроссбраузерных компонентов. Работа над оптимизацией скорости загрузки медиа контента', 'февраль 2017 &mdash; по настоящее время'),
 (2, 'Frontend разработчик, Вконтактe, mail.ru group', 'Работы в команде Вконтакте. Работал в команде над обновление сервиса Музыка, работа над видео разделом. Создание видеоплеера. Создание кроссбраузерных компонентов. Работа над оптимизацией скорости загрузки медиа контента', 'февраль 2017 &mdash; по настоящее время'),
 (3, 'Frontend разработчик, Вконтактe, mail.ru group', 'Работы в команде Вконтакте. Работал в команде над обновление сервиса Музыка, работа над видео разделом. Создание видеоплеера. Создание кроссбраузерных компонентов. Работа над оптимизацией скорости загрузки медиа контента', 'февраль 2017 &mdash; по настоящее время');
 
@@ -254,6 +254,37 @@ INSERT INTO `users` (`id`, `email`, `password`, `role`, `name`, `secondname`, `c
 (10, 'ilanka1@yandex.ru', '$2y$10$msMqY/br9As5lKYG.xbeWuYIpwJZNFMUG4T7thd/LkujLM/ut6/kW', 'user', NULL, NULL, NULL, NULL, NULL, NULL, 'fy8H931mAbDQilK', 0),
 (11, 'info3@mail.com', '$2y$10$rsQI8sL4yYLpibyvCA9vl.Z/ZgLmOAVCdoVNmvMgREnexerw0pHUG', 'user', 'Антон', 'Смирнов', 'Санкт-Петербург', 'Россия', '1103735083.jpg', '48-1103735083.jpg', 'xc8hCkeNiDE4sr7', 0);
 
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `works`
+--
+
+CREATE TABLE `works` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `title` varchar(191) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
+  `description` text COLLATE utf8mb4_unicode_520_ci,
+  `result` varchar(191) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
+  `technology` varchar(191) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
+  `link_work` varchar(191) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
+  `link_github` varchar(191) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
+  `cat` int(11) UNSIGNED DEFAULT NULL,
+  `date` int(11) UNSIGNED DEFAULT NULL,
+  `author_id` int(11) UNSIGNED DEFAULT NULL,
+  `date_time` datetime DEFAULT NULL,
+  `work_image` varchar(191) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
+  `work_image_small` varchar(191) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+
+--
+-- Дамп данных таблицы `works`
+--
+
+INSERT INTO `works` (`id`, `title`, `description`, `result`, `technology`, `link_work`, `link_github`, `cat`, `date`, `author_id`, `date_time`, `work_image`, `work_image_small`) VALUES
+(2, 'Сайт портфолио', '<p>Красивый, яркий и динамичный сайт портфолио.</p>\r\n', '<p>Завершенный сайт портфолио для презентации своих навыков и умений&nbsp;</p>\r\n', '<ul>\r\n	<li>HTML</li>\r\n	<li>CSS</li>\r\n	<li>JS</li>\r\n</ul>\r\n', 'https://github.com/Ivanova-Zinaida/WD04-project-Ivanova/pull/3', 'https://github.com/Ivanova-Zinaida/WD04-project-Ivanova/pull/3', 4, 1540552510, 5, '2018-10-26 14:15:10', '-443630963.jpg', '320--443630963.jpg'),
+(4, 'Блог путешественника ', '<p>Блог путешествинника , красивый сайт в котором можно описывать свои впечатления о своих путешествиях и приключениях. Сайт содержит красивое слайд шоу, так же данный сайт был размещен на вордпресс.</p>\r\n', '<p>Макет для сайта сделанный на фотошопе. Хорошо&nbsp;функционирующий сайт который установлен на Вордпрес . Удобен в использование и редактирование.</p>\r\n', '<ul>\r\n	<li>html</li>\r\n	<li>css</li>\r\n	<li>php</li>\r\n	<li>js</li>\r\n	<li>photoshop</li>\r\n</ul>\r\n', 'https://github.com/Ivanova-Zinaida/blog-traveler', 'https://github.com/Ivanova-Zinaida/blog-traveler', 4, 1540553152, 5, '2018-10-26 14:25:52', '644459003.jpg', '320-644459003.jpg'),
+(9, 'Верстка и frontend Интернет магазина', '<p>Сделана верстка и фронтэнд для интернет магазина мебели. Сверстано более 50-ти страниц. Сделаны все эффекты и интерактив. В работе использованы препроцессоры pug и less. Интерактив написан на JavaScript. Весь проект протестирован на своместимость, начиная с IE9. Для старых браузеров использован подход Graceful Degradation.</p>\r\n\r\n<h5><strong>Время работы над проектом: 6 недель</strong></h5>\r\n\r\n<h5><strong>Страниц сверстано: 52 страницы</strong></h5>\r\n\r\n<h5><strong>Бюджет проекта: до 60 000 рублей</strong></h5>\r\n', '<p>Проект сделан в срок. Заказчик доволен. Сайт запущен, работает и уже радует покупками посетителей и владельцев бизнеса.</p>\r\n', '<ul>\r\n	<li>HTML5, CSS3.</li>\r\n	<li>JavaScript, jQuery.</li>\r\n	<li>LESS, PUG, Gulp, npm, bower.</li>\r\n</ul>\r\n', '', '', 4, 1540552412, 5, '2018-10-26 14:13:32', '72750716.jpg', '320-72750716.jpg');
+
 --
 -- Индексы сохранённых таблиц
 --
@@ -316,6 +347,13 @@ ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `works`
+--
+ALTER TABLE `works`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `index_foreignkey_works_author` (`author_id`);
+
+--
 -- AUTO_INCREMENT для сохранённых таблиц
 --
 
@@ -329,7 +367,7 @@ ALTER TABLE `about`
 -- AUTO_INCREMENT для таблицы `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT для таблицы `comments`
@@ -359,7 +397,7 @@ ALTER TABLE `messages`
 -- AUTO_INCREMENT для таблицы `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT для таблицы `skills`
@@ -372,6 +410,12 @@ ALTER TABLE `skills`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT для таблицы `works`
+--
+ALTER TABLE `works`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

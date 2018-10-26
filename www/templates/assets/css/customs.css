@@ -17,15 +17,20 @@ padding-bottom: 10px;
     bottom: 10px;
     left: 200px;
 }
+.button-right-top-port{
+	position: relative;
+	top:-20px;
+}
 .button-right-top{
 	position: relative;
+	top:-4px;
 }
-.button_position{
+.button_position{ 
 	position: absolute;
 	left: -180px;
 }
 .mr-100{
-	margin-right: 100px !important; 
+	margin-right: 140px !important; 
 }
 .avatar-small{
 width: 105px;
@@ -33,4 +38,7 @@ height: 105px;
 }
 .about-text h2{
 font-weight: 800;	
+}
+.logo-portfolio-icon{
+	color:black;
 }

@@ -1,6 +1,7 @@
 		<div class="content">
 			<div class="container user-content section-page about-me__description-wrapper mb-60">
 			 
+			 
 				<div class="row">
 				<?php if ($about->photo!=''){?>
 					<div class="col-md-3">

@@ -5,7 +5,7 @@
 				
 					<form class="col-md-10 offset-md-1" method="POST" action="<?=HOST?>blog/post-new" enctype="multipart/form-data">
 						<h1>Добавить пост</h1>
-						
+						 
 						<?php require ROOT. "templates/_parts/_errors.tpl"?>
 						
 						<div class="form-group"><label class="label">Название<input class="input" name="postTitle" type="text" placeholder="Введите название"/></label></div>
@@ -35,7 +35,7 @@
 						</label></div>
 						
 						<input type="submit" value="Сохранить" class="button button--save mr-20" name='postNew'>
-						<a href="<?+HOST?>blog" class="button ">Отмена</a>
+						<a href="<?=HOST?>blog" class="button ">Отмена</a>
 						
 						
 					</form>

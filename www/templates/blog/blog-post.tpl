@@ -19,7 +19,7 @@
 								<div class="button-right-top"><a class="button_position button button--edit mt-25" href="<?=HOST?>blog/post-edit?id=<?=$post['id']?>">Редактировать</a>
 								<a class="button button--remove mt-25" href="<?=HOST?>blog/post-delete?id=<?=$post['id']?>">Удалить</a>
 								</div>
-								
+								 
 								<?PHP } ?>
 		
 							</div>    
@@ -38,9 +38,9 @@
 							<?PHP if ($post['post_image'] !=''){?>
 							<div class="post-img">
 								 <img src="<?=HOST?>usercontent/blog/<?=$post['post_image']?>" alt="<?=$post['title']?>" />
-						   </div>
+						   	</div>
 							<?PHP }?>
-			
+			 
 			
 							
 							<div class="post-text">

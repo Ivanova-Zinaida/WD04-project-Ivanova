@@ -71,7 +71,9 @@ $uri = explode('?', $uri);
 	 case 'edit-jobs':
 		 include ROOT."modules/about/edit-jobs.php";
 		 break;
-		
+	case 'about/jobs-delete':
+		 include ROOT."modules/about/jobs-delete.php";
+		 break;
 		 
 			 
 	
@@ -134,6 +136,26 @@ $uri = explode('?', $uri);
 		 
 	case 'contacts/message-delete':
 		 include ROOT."modules/contacts/message-delete.php";
+		 break;
+	
+	 case 'portfolio':
+		 include ROOT."modules/portfolio/index.php";
+		 break;	
+	
+	 case 'portfolio/portfolio-new':
+		 include ROOT."modules/portfolio/portfolio-new.php";
+		 break;	 
+	
+	 case 'portfolio/portfolio-edit':
+		 include ROOT."modules/portfolio/portfolio-edit.php";
+		 break;	 
+		 
+	 case 'portfolio/post':
+		 include ROOT."modules/portfolio/post.php";
+		 break;
+		 
+	case 'portfolio/portfolio-delete':
+		 include ROOT."modules/portfolio/portfolio-delete.php";
 		 break;
 		 
 		

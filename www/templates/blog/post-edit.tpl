@@ -1,5 +1,4 @@
-		
-		<div class="content">
+<div class="content">
 			<div class="container user-content section-page">
 				<div class="row">
 				
@@ -17,8 +16,7 @@
 								
 								<?PHP foreach ($cats as $cat){?>
 
-					    	<option value="<?=$cat['id']?>" 
-	  <?PHP echo ($post['cat']==$cat['id'])?"selected":"";?>>
+	<option value="<?=$cat['id']?>" selected="<?PHP echo ($post['cat']==$cat['id'])?'selected':'';?>">
 					     <?=$cat['cat_title']?>
 					     			</option>
 					     			
