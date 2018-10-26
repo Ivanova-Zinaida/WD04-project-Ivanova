@@ -4,8 +4,13 @@ define('DB_NAME','WD04-project-Ivanova');
 define('DB_USER','root');
 define('DB_PASS','');
 
-define('HOST', $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'].'/');
-define('ROOT', dirname(__FILE__).'/');
+
+
+define('SITE_NAME','личный сайт Зинаиды Ивановой');
+define('SITE_EMAIL','info@webdew04.com');
+define('ADMIN_EMAIL','info@rightblog.ru');
+
+$errors = array();
 
 
 ?>
